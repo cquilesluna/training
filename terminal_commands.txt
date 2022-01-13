@@ -1,0 +1,728 @@
+carolynaquiles@carolynas-mbp ~ % pwd
+/Users/carolynaquiles
+carolynaquiles@carolynas-mbp ~ % cd Desktop/Coding🤖 
+carolynaquiles@carolynas-mbp Coding🤖 % pwd
+/Users/carolynaquiles/Desktop/Coding🤖
+carolynaquiles@carolynas-mbp Coding🤖 % mkdir git_training
+carolynaquiles@carolynas-mbp Coding🤖 % ls
+R_Bootcamp              git_training            shell-lesson-data.zip
+bootcampbootcamp        shell-lesson-data
+carolynaquiles@carolynas-mbp Coding🤖 % mkdir git_Bootcamp
+carolynaquiles@carolynas-mbp Coding🤖 % git --version
+git version 2.34.1
+carolynaquiles@carolynas-mbp Coding🤖 % git config --list
+credential.helper=osxkeychain
+carolynaquiles@carolynas-mbp Coding🤖 % git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+carolynaquiles@carolynas-mbp Coding🤖 % git config --global user.name "cquilesluna"
+carolynaquiles@carolynas-mbp Coding🤖 % git config --global user.email "ctq2001@cumc.columbia.edu"
+carolynaquiles@carolynas-mbp Coding🤖 % git config --global core.autocrlf input    
+carolynaquiles@carolynas-mbp Coding🤖 % pwd
+/Users/carolynaquiles/Desktop/Coding🤖
+carolynaquiles@carolynas-mbp Coding🤖 % ls
+R_Bootcamp              git_Bootcamp            shell-lesson-data.zip
+bootcampbootcamp        shell-lesson-data
+carolynaquiles@carolynas-mbp Coding🤖 % cd git_Bootcamp/training 
+carolynaquiles@carolynas-mbp training % git config --global core.editor "nano w"
+carolynaquiles@carolynas-mbp training % git config --list                       
+credential.helper=osxkeychain
+user.name=cquilesluna
+user.email=ctq2001@cumc.columbia.edu
+core.autocrlf=input
+core.editor=nano w
+carolynaquiles@carolynas-mbp training % git config --global user.name
+cquilesluna
+carolynaquiles@carolynas-mbp training % git config --global user.email
+ctq2001@cumc.columbia.edu
+carolynaquiles@carolynas-mbp training % git status
+fatal: not a git repository (or any of the parent directories): .git
+carolynaquiles@carolynas-mbp training % mkdir planets
+carolynaquiles@carolynas-mbp training % cd planets
+carolynaquiles@carolynas-mbp planets % pwd
+/Users/carolynaquiles/Desktop/Coding🤖/git_Bootcamp/training/planets
+carolynaquiles@carolynas-mbp planets % git status   
+fatal: not a git repository (or any of the parent directories): .git
+carolynaquiles@carolynas-mbp planets % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /Users/carolynaquiles/Desktop/Coding🤖/git_Bootcamp/training/planets/.git/
+carolynaquiles@carolynas-mbp planets % git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+carolynaquiles@carolynas-mbp planets % git config --global init.defaultBranch main
+carolynaquiles@carolynas-mbp planets % git status                                 
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+carolynaquiles@carolynas-mbp planets % git branch -m main                         
+carolynaquiles@carolynas-mbp planets % git status        
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+carolynaquiles@carolynas-mbp planets % rm -rf planets
+carolynaquiles@carolynas-mbp planets % pwd
+/Users/carolynaquiles/Desktop/Coding🤖/git_Bootcamp/training/planets
+carolynaquiles@carolynas-mbp planets % cd ...
+cd: no such file or directory: ...
+carolynaquiles@carolynas-mbp planets % cd ..
+carolynaquiles@carolynas-mbp training % rm -rf planets
+carolynaquiles@carolynas-mbp training % ls
+carolynaquiles@carolynas-mbp training % ls                                         
+carolynaquiles@carolynas-mbp training % ls
+carolynaquiles@carolynas-mbp training % git init
+Initialized empty Git repository in /Users/carolynaquiles/Desktop/Coding🤖/git_Bootcamp/training/.git/
+carolynaquiles@carolynas-mbp training % git init
+Reinitialized existing Git repository in /Users/carolynaquiles/Desktop/Coding🤖/git_Bootcamp/training/.git/
+carolynaquiles@carolynas-mbp training % ls -al
+total 0
+drwxr-xr-x@ 3 carolynaquiles  staff   96 Jan 13 09:45 .
+drwxr-xr-x@ 3 carolynaquiles  staff   96 Jan 13 09:45 ..
+drwxr-xr-x@ 9 carolynaquiles  staff  288 Jan 13 09:45 .git
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+carolynaquiles@carolynas-mbp training % nano mars.txt
+carolynaquiles@carolynas-mbp training % cat mars.txt
+We have packed our toolset and ready to launch to space
+one small step for Caro
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mars.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+carolynaquiles@carolynas-mbp training % ls -al
+total 8
+drwxr-xr-x@ 4 carolynaquiles  staff  128 Jan 13 09:45 .
+drwxr-xr-x@ 3 carolynaquiles  staff   96 Jan 13 09:45 ..
+drwxr-xr-x@ 9 carolynaquiles  staff  288 Jan 13 09:49 .git
+-rw-r--r--  1 carolynaquiles  staff   80 Jan 13 09:48 mars.txt
+carolynaquiles@carolynas-mbp training % ls
+mars.txt
+carolynaquiles@carolynas-mbp training % nano mars.txt  
+carolynaquiles@carolynas-mbp training % nano mars.txt 
+carolynaquiles@carolynas-mbp training % cat mars.txt 
+We have packed our toolset and ready to launch to space
+one small step for Caro, one big step for her boots
+carolynaquiles@carolynas-mbp training % git add mars.txt 
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   mars.txt
+
+carolynaquiles@carolynas-mbp training % cat
+^[[D^[[D^[^[
+
+
+
+fwef
+wfwef
+
+
+^[^[^[
+
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   mars.txt
+
+carolynaquiles@carolynas-mbp training % git commit -m "first commit, *insert meaningful comment*"
+[main (root-commit) aeab12e] first commit, *insert meaningful comment*
+ 1 file changed, 2 insertions(+)
+ create mode 100644 mars.txt
+carolynaquiles@carolynas-mbp training % git show
+commit aeab12eb35e39045601cea0d4e0958cc43db04eb (HEAD -> main)
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 09:58:59 2022 -0500
+
+    first commit, *insert meaningful comment*
+
+diff --git a/mars.txt b/mars.txt
+new file mode 100644
+index 0000000..c0233b5
+--- /dev/null
++++ b/mars.txt
+@@ -0,0 +1,2 @@
++We have packed our toolset and ready to launch to space
++one small step for Caro, one big step for her boots
+carolynaquiles@carolynas-mbp training % git log
+commit aeab12eb35e39045601cea0d4e0958cc43db04eb (HEAD -> main)
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 09:58:59 2022 -0500
+
+    first commit, *insert meaningful comment*
+carolynaquiles@carolynas-mbp training % nano mars.txt
+carolynaquiles@carolynas-mbp training % git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+carolynaquiles@carolynas-mbp training % git diff mars.txt 
+diff --git a/mars.txt b/mars.txt
+index c0233b5..ec19c53 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,2 +1,3 @@
+ We have packed our toolset and ready to launch to space
+ one small step for Caro, one big step for her boots
++We are docked into the international space station and ready for sling to marzz
+carolynaquiles@carolynas-mbp training % git add mars.txt 
+carolynaquiles@carolynas-mbp training % git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   mars.txt
+
+carolynaquiles@carolynas-mbp training % git commit -m "second commit"
+[main e3f10a6] second commit
+ 1 file changed, 1 insertion(+)
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+nothing to commit, working tree clean
+carolynaquiles@carolynas-mbp training % git show
+commit e3f10a6842cbbcb09afe3446c61f63b7a18eef1b (HEAD -> main)
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 10:07:51 2022 -0500
+
+    second commit
+
+diff --git a/mars.txt b/mars.txt
+index c0233b5..ec19c53 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,2 +1,3 @@
+ We have packed our toolset and ready to launch to space
+ one small step for Caro, one big step for her boots
++We are docked into the international space station and ready for sling to marzz
+carolynaquiles@carolynas-mbp training % git log
+commit e3f10a6842cbbcb09afe3446c61f63b7a18eef1b (HEAD -> main)
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 10:07:51 2022 -0500
+
+    second commit
+
+commit aeab12eb35e39045601cea0d4e0958cc43db04eb
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 09:58:59 2022 -0500
+
+    first commit, *insert meaningful comment*
+carolynaquiles@carolynas-mbp training % nano mars.txt 
+carolynaquiles@carolynas-mbp training % cat mars.txt 
+We have packed our toolset and ready to launch to space
+one small step for Caro, one big step for her boots
+We are docked into the international space station and ready for sling to marzz
+I have lots of time and I am starting my journal on the way to mars
+
+carolynaquiles@carolynas-mbp training % git status  
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+carolynaquiles@carolynas-mbp training % git diff mars.txt 
+diff --git a/mars.txt b/mars.txt
+index ec19c53..7472508 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,3 +1,5 @@
+ We have packed our toolset and ready to launch to space
+ one small step for Caro, one big step for her boots
+ We are docked into the international space station and ready for sling to marzz
++I have lots of time and I am starting my journal on the way to mars
++
+carolynaquiles@carolynas-mbp training % git add mars.txt 
+carolynaquiles@carolynas-mbp training % git status       
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   mars.txt
+
+carolynaquiles@carolynas-mbp training % git diff --staged mars.txt 
+diff --git a/mars.txt b/mars.txt
+index ec19c53..7472508 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,3 +1,5 @@
+ We have packed our toolset and ready to launch to space
+ one small step for Caro, one big step for her boots
+ We are docked into the international space station and ready for sling to marzz
++I have lots of time and I am starting my journal on the way to mars
++
+carolynaquiles@carolynas-mbp training % git status                
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   mars.txt
+
+carolynaquiles@carolynas-mbp training % git commit -m "third commit" 
+[main 33eed4a] third commit
+ 1 file changed, 2 insertions(+)
+carolynaquiles@carolynas-mbp training % git show
+commit 33eed4a445336d132273f7524ddc7ad9db69b289 (HEAD -> main)
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 10:14:36 2022 -0500
+
+    third commit
+
+diff --git a/mars.txt b/mars.txt
+index ec19c53..7472508 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,3 +1,5 @@
+ We have packed our toolset and ready to launch to space
+ one small step for Caro, one big step for her boots
+ We are docked into the international space station and ready for sling to marzz
++I have lots of time and I am starting my journal on the way to mars
++
+carolynaquiles@carolynas-mbp training % git log
+commit 33eed4a445336d132273f7524ddc7ad9db69b289 (HEAD -> main)
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 10:14:36 2022 -0500
+
+    third commit
+
+commit e3f10a6842cbbcb09afe3446c61f63b7a18eef1b
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 10:07:51 2022 -0500
+
+    second commit
+
+commit aeab12eb35e39045601cea0d4e0958cc43db04eb
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 09:58:59 2022 -0500
+
+    first commit, *insert meaningful comment*
+carolynaquiles@carolynas-mbp training % touch a.bat b.bat
+carolynaquiles@carolynas-mbp training % touch a.dat b.bat
+carolynaquiles@carolynas-mbp training % ls
+a.bat           a.dat           b.bat           mars.txt
+carolynaquiles@carolynas-mbp training % rm -rf a.bat
+carolynaquiles@carolynas-mbp training % ls
+a.dat           b.bat           mars.txt
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        a.dat
+        b.bat
+
+nothing added to commit but untracked files present (use "git add" to track)
+carolynaquiles@carolynas-mbp training % nano .gitignore
+carolynaquiles@carolynas-mbp training % cat .gitignore 
+a.dat
+b.dat
+carolynaquiles@carolynas-mbp training % ls
+a.dat           b.bat           mars.txt
+carolynaquiles@carolynas-mbp training % rm -rf b.bat   
+carolynaquiles@carolynas-mbp training % touch b.dat
+carolynaquiles@carolynas-mbp training % ls
+a.dat           b.dat           mars.txt
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+carolynaquiles@carolynas-mbp training % git add .   
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+carolynaquiles@carolynas-mbp training % git commit -m "fourth commit"
+[main 3776c30] fourth commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+carolynaquiles@carolynas-mbp training % git show
+commit 3776c30c8f50026e7988b04dc94fc704eb1b1a07 (HEAD -> main)
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 10:23:29 2022 -0500
+
+    fourth commit
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..4f6934f
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++a.dat
++b.dat
+carolynaquiles@carolynas-mbp training % git log
+commit 3776c30c8f50026e7988b04dc94fc704eb1b1a07 (HEAD -> main)
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 10:23:29 2022 -0500
+
+    fourth commit
+
+commit 33eed4a445336d132273f7524ddc7ad9db69b289
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 10:14:36 2022 -0500
+
+    third commit
+
+commit e3f10a6842cbbcb09afe3446c61f63b7a18eef1b
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 10:07:51 2022 -0500
+
+    second commit
+
+commit aeab12eb35e39045601cea0d4e0958cc43db04eb
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 09:58:59 2022 -0500
+
+    first commit, *insert meaningful comment*
+carolynaquiles@carolynas-mbp training % git diff HEAD~1
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..4f6934f
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++a.dat
++b.dat
+carolynaquiles@carolynas-mbp training % git diff HEAD~3
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..4f6934f
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++a.dat
++b.dat
+diff --git a/mars.txt b/mars.txt
+index c0233b5..7472508 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,2 +1,5 @@
+ We have packed our toolset and ready to launch to space
+ one small step for Caro, one big step for her boots
++We are docked into the international space station and ready for sling to marzz
++I have lots of time and I am starting my journal on the way to mars
++
+carolynaquiles@carolynas-mbp training % pwd
+/Users/carolynaquiles/Desktop/Coding🤖/git_Bootcamp/training
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        training.Rproj
+
+no changes added to commit (use "git add" and/or "git commit -a")
+carolynaquiles@carolynas-mbp training % cat .gitignore 
+a.dat
+b.dat
+.Rproj.user
+carolynaquiles@carolynas-mbp training % git add .
+carolynaquiles@carolynas-mbp training % git commit -m "sixth commit"
+[main 291de57] sixth commit
+ 2 files changed, 14 insertions(+)
+ create mode 100644 training.Rproj
+carolynaquiles@carolynas-mbp training % git log
+commit 291de57cf1362f4dcf110a21fd0bf5ac00c4b2dc (HEAD -> main)
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 11:08:11 2022 -0500
+
+    sixth commit
+
+commit 3776c30c8f50026e7988b04dc94fc704eb1b1a07
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 10:23:29 2022 -0500
+
+    fourth commit
+
+commit 33eed4a445336d132273f7524ddc7ad9db69b289
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 10:14:36 2022 -0500
+
+    third commit
+
+commit e3f10a6842cbbcb09afe3446c61f63b7a18eef1b
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 10:07:51 2022 -0500
+
+    second commit
+
+commit aeab12eb35e39045601cea0d4e0958cc43db04eb
+Author: cquilesluna <ctq2001@cumc.columbia.edu>
+Date:   Thu Jan 13 09:58:59 2022 -0500
+
+    first commit, *insert meaningful comment*
+carolynaquiles@carolynas-mbp training % cat mars.txt                
+We have packed our toolset and ready to launch to space
+one small step for Caro, one big step for her boots
+We are docked into the international space station and ready for sling to marzz
+I have lots of time and I am starting my journal on the way to mars
+I am still bored and continue to add my journal till we reach mars
+carolynaquiles@carolynas-mbp training % git remote add origin https://github.com/cquilesluna/training.git
+carolynaquiles@carolynas-mbp training % git branch -M main
+carolynaquiles@carolynas-mbp training % git push -u origin main
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (19/19), 1.82 KiB | 232.00 KiB/s, done.
+Total 19 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/cquilesluna/training.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+carolynaquiles@carolynas-mbp training % cat mars.txt 
+We have packed our toolset and ready to launch to space
+one small step for Caro, one big step for her boots
+We are docked into the international space station and ready for sling to marzz
+I have lots of time and I am starting my journal on the way to mars
+I am still bored and continue to add my journal till we reach mars
+carolynaquiles@carolynas-mbp training % git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 761 bytes | 84.00 KiB/s, done.
+From https://github.com/cquilesluna/training
+ * branch            main       -> FETCH_HEAD
+   f5a0338..dd0d4d6  main       -> origin/main
+Updating f5a0338..dd0d4d6
+Fast-forward
+ mars.txt | 1 +
+ 1 file changed, 1 insertion(+)
+carolynaquiles@carolynas-mbp training % cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+        ignorecase = true
+        precomposeunicode = true
+[remote "origin"]
+        url = https://github.com/cquilesluna/training.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+        remote = origin
+        merge = refs/heads/main
+carolynaquiles@carolynas-mbp training % cat mars.txt 
+We have packed our toolset and ready to launch to space
+one small step for Caro, one big step for her boots
+We are docked into the international space station and ready for sling to marzz
+I have lots of time and I am starting my journal on the way to mars
+I am still bored and continue to add my journal till we reach mars
+We are approaching mars orbit, ready to alight
+carolynaquiles@carolynas-mbp training % cat mars.txt 
+We have packed our toolset and ready to launch to space
+one small step for Caro, one big step for her boots
+We are docked into the international space station and ready for sling to marzz
+I have lots of time and I am starting my journal on the way to mars
+I am still bored and continue to add my journal till we reach mars
+We are approaching mars orbit, ready to alight
+carolynaquiles@carolynas-mbp training % git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 744 bytes | 124.00 KiB/s, done.
+From https://github.com/cquilesluna/training
+ * branch            main       -> FETCH_HEAD
+   dd0d4d6..32315f1  main       -> origin/main
+Updating dd0d4d6..32315f1
+Fast-forward
+ mars.txt | 1 +
+ 1 file changed, 1 insertion(+)
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+carolynaquiles@carolynas-mbp training % cat mars.txt 
+We have packed our toolset and ready to launch to space
+one small step for Caro, one big step for her boots
+We are docked into the international space station and ready for sling to marzz
+I have lots of time and I am starting my journal on the way to mars
+I am still bored and continue to add my journal till we reach mars
+We are approaching mars orbit, ready to alight
+Great work collaborator
+carolynaquiles@carolynas-mbp training % nano mars.txt 
+carolynaquiles@carolynas-mbp training % git push -u origin main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+Everything up-to-date
+carolynaquiles@carolynas-mbp training % cat mars.txt 
+We have packed our toolset and ready to launch to space
+one small step for Caro, one big step for her boots
+We are docked into the international space station and ready for sling to marzz
+I have lots of time and I am starting my journal on the way to mars
+I am still bored and continue to add my journal till we reach mars
+We are approaching mars orbit, ready to alight
+changing this ≈
+carolynaquiles@carolynas-mbp training % nano mars.txt 
+carolynaquiles@carolynas-mbp training % git push -u origin main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+Everything up-to-date
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+carolynaquiles@carolynas-mbp training % cat mars.txt 
+We have packed our toolset and ready to launch to space
+one small step for Caro, one big step for her boots
+We are docked into the international space station and ready for sling to marzz
+I have lots of time and I am starting my journal on the way to mars
+I am still bored and continue to add my journal till we reach mars
+We are approaching mars orbit, ready to alight
+Great work collaborator
+carolynaquiles@carolynas-mbp training % nan
+zsh: command not found: nan
+carolynaquiles@carolynas-mbp training % nano mars.txt 
+carolynaquiles@carolynas-mbp training % git push -u origin main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+Everything up-to-date
+carolynaquiles@carolynas-mbp training % git status             
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+carolynaquiles@carolynas-mbp training % git add .                   
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   mars.txt
+
+carolynaquiles@carolynas-mbp training % git push -u origin main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+Everything up-to-date
+carolynaquiles@carolynas-mbp training % git status             
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   mars.txt
+
+carolynaquiles@carolynas-mbp training % git commit -m "added comment for collaborator to pull"
+[main a3b4b1a] added comment for collaborator to pull
+ 1 file changed, 1 insertion(+)
+carolynaquiles@carolynas-mbp training % git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+carolynaquiles@carolynas-mbp training % git push -u origin mainEnumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 394 bytes | 394.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/cquilesluna/training.git
+   32315f1..a3b4b1a  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+carolynaquiles@carolynas-mbp training % git diff mars.txt 
+carolynaquiles@carolynas-mbp training % 
